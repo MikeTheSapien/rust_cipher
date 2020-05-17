@@ -1,5 +1,5 @@
 # rust_cipher
-v0.0.0 (are u serios?)
+v0.0.0 (are u serious?)
 
 This repo are for those who seek to understand Rust <br />
 programming language and basic cryptography. <br />
