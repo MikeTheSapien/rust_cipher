@@ -1,3 +1,5 @@
+use cipher;
+
 fn main() {
-    println!("Hello, world!");
+    cipher::initialize();
 }
