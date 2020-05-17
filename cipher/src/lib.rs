@@ -3,6 +3,8 @@ use std::error::Error;
 
 pub mod models;
 
+use models::user_input::UserInput;
+
 pub fn initialize(){
     let result = get_args();
     if let Err(err) = result {
@@ -19,7 +21,7 @@ pub fn initialize(){
 // @ function to get args passed by the user.
 // @ should return a Err(&str) if an error occurs,
 // @ and a Ok(Vec<String>) for the args if successful
-fn get_args() -> Result<Vec<String>, &'static str> {
+fn get_args() -> Result<UserInput, &'static str> {
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
         let err_message = 
@@ -31,6 +33,7 @@ fn get_args() -> Result<Vec<String>, &'static str> {
             terminating program… kthxbye…";
         Err(err_message)
     } else {
-        Ok(args)
+        let input = UserInput::new(&args);
+        Ok(input)
     }
 }
