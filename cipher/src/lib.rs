@@ -6,7 +6,6 @@ pub mod models;
 use models::user_input::UserInput;
 
 pub fn run(ui: UserInput) -> Result<(), Box<dyn Error>> {
-    println!("what the");
     let message = fs::read_to_string(ui.message_path)?;
     println!("{}", message);
     Ok(())

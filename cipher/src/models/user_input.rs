@@ -20,7 +20,7 @@ impl UserInput {
     &str ==> if parsing failed, an error message is returned
     */
         if args.len() < 3 {
-            let err_message = "more args needed.\
+            let err_message = "more args needed. \
              1st would be path of message to encrypt. \
              2nd would be the encryption key.\n\
              example: `cipher message.txt secret_key`\n\

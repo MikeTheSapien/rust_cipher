@@ -4,12 +4,13 @@ use cipher::models::user_input::UserInput;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let config = UserInput::new(args);
-    if let Ok(a) = config {
-        cipher::run(a);
+    let config = UserInput::new(args).unwrap_or_else(|err| {
+        println!("Problem parsing arguments: {}", err);
+        process::exit(1);
+    });
+
+    if let Err(e) = cipher::run(config) {
+        println!("App error: {}", e);
+        process::exit(1);
     }
-    // if let Err(e) = cipher::run(config) {
-    //     println!("App error: {}", e);
-    //     process::exit(1);
-    // }
 }
