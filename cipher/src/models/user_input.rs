@@ -1,6 +1,6 @@
 pub struct UserInput {
     pub message_path: String,
-    pub key: String,
+    pub key: u32,
 }
 
 impl UserInput {
@@ -28,9 +28,17 @@ impl UserInput {
              terminating program… kthxbye…";
             Err(err_message)
         } else {
+            let key = args[2].parse::<u32>().unwrap_or_else(|err| {
+                println!("key must be a positive integer. {}", err);
+            });
+            // let key = match args[2].parse::<u32>() {
+            //     Ok(n) => n,
+            //     Err(e) => e,
+            // };
+
             let config = UserInput {
                 message_path: args[1].clone(),
-                key: args[2].clone(),
+                key,
             };
             Ok(config)
         }
