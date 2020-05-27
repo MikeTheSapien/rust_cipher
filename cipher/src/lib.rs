@@ -17,10 +17,12 @@ pub fn initialize(){
 //}
 
 // @ Mike Dula
-// @ 2020-5-17 18:19
+// @ 2020-5-27 19:48
 // @ function to get args passed by the user.
-// @ should return a Err(&str) if an error occurs,
-// @ and a Ok(Vec<String>) for the args if successful
+// ==returns==
+// Ok(UserInput) => if successful, a struct UserInput is returned
+//                  contained within the Ok() enum.
+// Err(&str) => if an error occurs
 fn get_args() -> Result<UserInput, &'static str> {
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
@@ -33,7 +35,7 @@ fn get_args() -> Result<UserInput, &'static str> {
             terminating program… kthxbye…";
         Err(err_message)
     } else {
-        let input = UserInput::new(&args);
+        let input = UserInput::new(args);
         Ok(input)
     }
 }
