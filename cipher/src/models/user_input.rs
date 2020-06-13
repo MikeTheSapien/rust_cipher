@@ -30,6 +30,7 @@ impl UserInput {
         } else {
             let key = args[2].parse::<u32>().unwrap_or_else(|err| {
                 println!("key must be a positive integer. {}", err);
+                0
             });
             // let key = match args[2].parse::<u32>() {
             //     Ok(n) => n,

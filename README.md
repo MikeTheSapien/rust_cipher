@@ -18,6 +18,8 @@ on giving back to the open source community that helped him<br />
 in his endeavors.<br />
 Also this someone is bugging some Rust developer,<br />
 to help him improve his coding in Rust.<br />
+And that someone is @erichdongubler
+you can message him at erichdongubler@gmail.com
 <br />
 
 ### Would-be Features
