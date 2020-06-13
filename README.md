@@ -11,9 +11,6 @@ Comments for functions and methods will be heavily used, <br />
 and a lot of printing will occur on how the code encrypts a message.<br />
 <br />
 <br />
-Criticisms that are clear and constructive are welcomed,<br />
-also contributors who also want to experience contributing to<br />
-the open source community are welcomed.<br />
 <br />
 This repo is made by someone who has not taken the<br />
 conventional programming career path and who's keen<br />
@@ -21,6 +18,8 @@ on giving back to the open source community that helped him<br />
 in his endeavors.<br />
 Also this someone is bugging some Rust developer,<br />
 to help him improve his coding in Rust.<br />
+And that someone is @erichdongubler
+you can message him at erichdongubler@gmail.com
 <br />
 
 ### Would-be Features
