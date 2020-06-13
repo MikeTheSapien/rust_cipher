@@ -22,8 +22,8 @@ impl UserInput {
         if args.len() < 3 {
             let err_message = "more args needed. \
              1st would be path of message to encrypt. \
-             2nd would be the encryption key.\n\
-             example: `cipher message.txt secret_key`\n\
+             2nd would be the encryption key that is an integer.\n\
+             example: `cipher message.txt 3`\n\
              or run: `cipher --help` for more info\n\
              terminating program… kthxbye…";
             return Err(err_message);
