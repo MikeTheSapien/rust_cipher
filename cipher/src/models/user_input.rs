@@ -1,5 +1,5 @@
 pub struct UserInput {
-    pub message_path: String,
+    pub message: String,
     pub key: u32,
 }
 
@@ -38,7 +38,7 @@ impl UserInput {
         }
 
         let config = UserInput {
-            message_path: args[1].clone(),
+            message: args[1].clone(),
             key,
         };
         Ok(config)
